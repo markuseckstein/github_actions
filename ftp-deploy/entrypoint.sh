@@ -11,7 +11,7 @@ WDEFAULT_REMOTE_DIR=${REMOTE_DIR:-"."}
 
 ls -la $WDEFAULT_LOCAL_DIR
 
-lftp $FTP_SERVER -u $FTP_USERNAME,$FTP_PASSWORD -e "set ftp:ssl-allow no; mirror -R $WDEFAULT_LOCAL_DIR $WDEFAULT_REMOTE_DIR; quit"
+lftp $FTP_SERVER -u $FTP_USERNAME,$FTP_PASSWORD -e "set ftp:ssl-allow yes; mirror -R $WDEFAULT_LOCAL_DIR $WDEFAULT_REMOTE_DIR; quit"
 
 echo "FTP Deploy Complete"
 exit 0
